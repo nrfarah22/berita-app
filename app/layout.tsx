@@ -1,6 +1,9 @@
 import "./globals.css";
-import Navbar from "./component/Navbar";
-import HeroSection from "./component/HeroSection";
+import { Provider } from "@/app/Provider";
+import Navbar from "@/components/ui/Navbar";
+
+
+
 
 export default function DashboardLayout({
   children,
@@ -8,10 +11,14 @@ export default function DashboardLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body>
-        <Navbar />
-        <main>{children}</main>
+        <Provider>
+          <Navbar />
+          {children}
+          
+        </Provider>
+        
       </body>
     </html>
   )
