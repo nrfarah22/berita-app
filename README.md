@@ -1,36 +1,145 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📰 Berita App
 
-## Getting Started
+**Berita App** adalah aplikasi web berita berbasis **Next.js App Router** yang menampilkan berita terkini dari berbagai kategori seperti Nasional, Internasional, Teknologi, Olahraga, dan lainnya. Aplikasi ini mendukung **dark mode**, **routing dinamis**, serta **UI responsif**.
 
-First, run the development server:
+---
+
+## 🚀 Tech Stack
+
+* **Next.js** (App Router)
+* **React**
+* **TypeScript**
+* **Tailwind CSS**
+* **API Berita Indo**
+* **Lucide React (Icons)**
+
+---
+
+## ✨ Fitur Utama
+
+* ✅ Homepage berita
+* ✅ Kategori berita dinamis (`/category/[slug]`)
+* ✅ Dropdown kategori di Navbar
+* ✅ Dark / Light Mode
+* ✅ Responsive (Desktop & Mobile)
+
+---
+
+## 📂 Struktur Folder
+
+```
+app/
+ ├─ layout.tsx
+ ├─ page.tsx
+ ├─ globals.css
+ ├─ category/
+ │   └─ [slug]/
+ │      └─ page.tsx
+components/
+ └─ ui/
+    ├─ Navbar.tsx
+    ├─ HeroSection.tsx
+    ├─ CategorySection.tsx
+```
+
+---
+
+## 🔗 API yang Digunakan
+
+Berita diambil dari:
+
+```
+https://berita-indo-api-next.vercel.app/api/cnn-news/{category}
+```
+
+Contoh kategori:
+
+* nasional
+* internasional
+* teknologi
+* olahraga
+* ekonomi
+* hiburan
+
+---
+
+## 🛠️ Cara Menjalankan Project
+
+### 1️⃣ Clone repository
+
+```bash
+git clone https://github.com/username/berita-app.git
+cd berita-app
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Jalankan development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4️⃣ Buka di browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📄 Routing Dinamis (Category)
 
-To learn more about Next.js, take a look at the following resources:
+Halaman kategori menggunakan **dynamic route**:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+/category/[slug]
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contoh:
 
-## Deploy on Vercel
+```
+/category/nasional
+/category/teknologi
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Slug digunakan untuk mengambil data berita sesuai kategori dari API.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🌙 Dark Mode
+
+Dark mode diatur menggunakan:
+
+* `next-themes`
+* `ModeToggle` component
+* Tailwind `dark:` utilities
+
+---
+
+## 📌 Catatan Penting
+
+* Navbar adalah **Client Component**
+* Page & fetch API menggunakan **Server Component**
+* Client Component **tidak boleh async**
+* Fetch data dilakukan ulang per halaman (best practice)
+
+---
+
+## 📸 Preview (opsional)
+
+Tambahkan screenshot aplikasi jika diperlukan.
+
+---
+
+## 👩‍💻 Author
+
+**Farah Nur Izzati**
+
+
+
+Tinggal bilang 👍
