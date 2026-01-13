@@ -84,14 +84,6 @@ npm install
 npm run dev
 ```
 
-### 4️⃣ Buka di browser
-
-```
-http://localhost:3000
-```
-
----
-
 ## 📄 Routing Dinamis (Category)
 
 Halaman kategori menggunakan **dynamic route**:
@@ -121,25 +113,8 @@ Dark mode diatur menggunakan:
 
 ---
 
-## 📌 Catatan Penting
-
-* Navbar adalah **Client Component**
-* Page & fetch API menggunakan **Server Component**
-* Client Component **tidak boleh async**
-* Fetch data dilakukan ulang per halaman (best practice)
-
----
-
-## 📸 Preview (opsional)
-
-Tambahkan screenshot aplikasi jika diperlukan.
-
----
-
 ## 👩‍💻 Author
 
 **Farah Nur Izzati**
 
-
-
-Tinggal bilang 👍
+## Demo : https://beritaapp.vercel.app/
