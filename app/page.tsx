@@ -1,5 +1,7 @@
-import HeroSection from "./component/HeroSection"
-import CategorySection from "./component/CategorySection"
+
+import Navbar from "@/components/ui/Navbar";
+import HeroSection from "@/components/ui/HeroSection";
+import CategorySection from "@/components/ui/CategorySection"
 
 export default function Page() {
   return (
@@ -7,6 +9,5 @@ export default function Page() {
       <HeroSection />
       <CategorySection />
     </>
-    
   )
 }
